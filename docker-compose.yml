@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  ocserv:
+    build: .
+    container_name: ocserv
+    privileged: true
+    ports:
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./ocserv.conf:/etc/ocserv/ocserv.conf
+      - ./entrypoint.sh:/entrypoint.sh
+    restart: unless-stopped
