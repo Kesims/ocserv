@@ -1,10 +1,10 @@
 FROM alpine:3.13
 
-ENV OCSERV_VERSION 1.1.2
-ENV CA_CN SAMPLE CA
-ENV CA_ORG Big Corp
-ENV SRV_CN SAMPLE server
-ENV SRV_ORG MyCompany
+ENV OCSERV_VERSION 1.3.0
+ENV CA_CN sample_ca
+ENV CA_ORG ca_org
+ENV SRV_CN srv_cn
+ENV SRV_ORG srv_org
 RUN set -ex \
     && apk add --no-cache --virtual .build-dependencies \
     readline-dev \
